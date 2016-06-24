@@ -1,0 +1,387 @@
+/* ----- Moodle Dialogue Settings (moodle-core-dialogue) ----- */
+.moodle-dialogue-base .moodle-dialogue {
+    min-width: 52em;
+    z-index: 600;
+}
+.moodle-dialogue-base .moodle-dialogue .moodle-dialogue-wrap {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    border: 1px solid [[setting:corsch_1]];
+    border-radius: 0px;
+    background-color: [[setting:corsch_B]];
+}
+/* See the shadow options in aigne_style.css #1162 */
+/* Dialogue Header area */
+.moodle-dialogue-base .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-hd {
+    margin: 0px 0px 0px 0px;
+    padding: 5px 0px 5px 0px;
+    border-radius: 0px 0px 0px 0px;
+    border-bottom: 1px solid [[setting:corsch_1]];
+    background: [[setting:corsch_2]];
+    color: [[setting:corsch_B]];
+    font-size: 1.2em;
+    font-weight: normal;
+    text-align: center;
+    text-shadow: 1px 1px 1px [[setting:corsch_T]];
+}
+.moodle-dialogue-base .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-hd .yui3-widget-buttons {
+    padding: 5px 0px 5px 0px;
+}
+.dir-rtl .moodle-dialogue-base .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-hd .yui3-widget-buttons {
+    left: 0px;
+    right: auto;
+}
+.moodle-dialogue-base .moodle-dialogue .closebutton {
+    display: inline-block;
+    width: 25px;
+    height: 15px;
+    float: right;
+    margin: 0px 5px 0px 0px;
+    border: none;
+    border-radius: 0px 0px 0px 0px;
+    background: url([[pix:theme|sprite]]) no-repeat;
+    vertical-align: middle;
+    cursor: pointer;
+}
+/* Dialogue Body Area */
+.moodle-dialogue-base .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-bd {
+    margin: 0px 0px 0px 0px;
+    padding: 1em 1em 1em 1em;
+    background-color: [[setting:corsch_B]];
+    color: [[setting:corsch_T]];
+    font-size: 1em;
+    line-height: 1.80em;
+}
+/* Dialogue Footer Area */
+.moodle-dialogue-base .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-ft {
+    margin: 0px 0px 0px 0px;
+    padding: 5px 10px 10px 10px;
+    background-color: [[setting:corsch_B]];
+    font-size: 0.90em;
+    text-align: right;
+}
+
+/* Helper / Tooltip Dialogue Type */
+.moodle-dialogue-base .moodle-dialogue .moodle-dialogue-wrap .tooltiptext {
+    max-height: 300px;
+}
+.moodle-dialogue-base .moodle-dialogue-tooltip {
+    z-index: 9001;
+}
+
+/* Confirmation Dialogue Type */
+.moodle-dialogue-confirm .confirmation-dialogue {
+    text-align:center;
+}
+.moodle-dialogue-confirm .confirmation-dialogue input {
+    text-align:center;
+    min-width:80px
+}
+.moodle-dialogue-confirm .confirmation-message { 
+    margin:0.5em 1em;
+}
+/* Exeption Dialogue Type */
+.moodle-dialogue-exception .moodle-exception-message {
+    margin:1em;
+    text-align:center
+}
+.moodle-dialogue-exception .moodle-exception-param {
+    margin-bottom:0.5em;
+}
+.moodle-dialogue-exception .moodle-exception-param label {
+    width:150px;
+    font-weight:bold;
+}
+.moodle-dialogue-exception .param-stacktrace label {
+    display:block;
+    margin: 0px 0px 0px 0px;
+    padding: 4px 1em 4px 1em;
+    background-color:#EEE;
+    border:1px solid #ccc;
+    border-bottom-width:0;
+}
+.moodle-dialogue-exception .param-stacktrace pre {
+    display:block;
+    height:200px;
+    overflow:auto;
+    border:1px solid #ccc;
+    background-color:#fff;
+}
+.moodle-dialogue-exception .param-stacktrace .stacktrace-file {
+    display:inline-block;
+    margin:4px 0;
+    color:navy;
+    font-size:80%;
+}
+.moodle-dialogue-exception .param-stacktrace .stacktrace-line {
+    display: inline-block;
+    width: 50px;
+    margin: 4px 1em 4px 1em;
+    color: #CC0000;
+    font-size: 80%;
+}
+.moodle-dialogue-exception .param-stacktrace .stacktrace-call {
+    padding-left: 25px;
+    margin-bottom: 4px;
+    padding-bottom: 4px;
+    color: #333;
+    font-size: 90%;
+    border-bottom: 1px solid #eee;
+}
+
+/* Question Bank - Question Chooser "Close" button */
+#page-question-edit.dir-rtl a.container-close {
+    right: auto;
+    left: 6px;
+}
+
+/* Chooser Dialogues (moodle-core-chooserdialogue) */
+/* First, hide the dialog and it's title */
+.moodle-dialogue-base .chooserdialoguebody,
+.moodle-dialogue-base .choosertitle {
+    display:none;
+}
+.moodle-dialogue-base .chooserdialogue .moodle-dialogue-wrap .moodle-dialogue-bd {
+    padding: 1px 1px 1px 1px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background: [[setting:corsch_4]];
+    font-size: 0.90em;
+}
+.moodle-dialogue-base .chooserdialogue .moodle-dialogue-wrap .moodle-dialogue-ft {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+.choosercontainer {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+/* Options hole area */
+.choosercontainer #chooseform .options {
+    position: relative;
+    border-bottom: 1px solid #777777;
+}
+/* Left options allowed area */
+.jsenabled .choosercontainer #chooseform .alloptions {
+    max-width: 22em;
+    box-shadow: 0px 0px 0px 0px;
+    -webkit-box-shadow: 0px 0px 0px 0px;
+    -moz-box-shadow: 0px 0px 0px 0px;
+}
+/* Right instructions/help area */
+.jsenabled .choosercontainer #chooseform .instruction,
+.jsenabled .choosercontainer #chooseform .typesummary {
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 22em;
+    margin: 0px 0px 0px 0px;
+    padding: 1em 1em 1em 1em;
+    line-height: 1.5em;
+}
+.dir-rtl.jsenabled .choosercontainer #chooseform .instruction,
+.dir-rtl.jsenabled .choosercontainer #chooseform .typesummary {left: 0px; right: 22em;}
+/* Settings for option rows and option subtypes */
+.choosercontainer #chooseform .option,
+.choosercontainer #chooseform .nonoption {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+.choosercontainer #chooseform .moduletypetitle {
+    padding: 2em 0.5em 0px 2em;
+}
+.dir-rtl .choosercontainer #chooseform .moduletypetitle {padding: 0.5em 0.5em 1px 2em;}
+.choosercontainer #chooseform .option .typename,
+.choosercontainer #chooseform .option span.modicon img.icon,
+.choosercontainer #chooseform .nonoption .typename,
+.choosercontainer #chooseform .nonoption span.modicon img.icon {
+    padding: 0px 0.2em 0px 0.2em;
+}
+.choosercontainer #chooseform .option label {
+    display: block;
+    padding: 0.5em 0.5em 0px 2em;
+    border-bottom: 1px solid [[setting:corsch_B]];
+}
+.dir-rtl .choosercontainer #chooseform .option label {padding: 0.5em 2em 1px 0.5em;}
+.choosercontainer #chooseform .nonoption {
+    display: block;
+    padding: 1em 0.5em 0px 5em;
+}
+.dir-rtl .choosercontainer #chooseform .nonoption {padding: 1em 5em 0px 0.5em;}
+.choosercontainer #chooseform .subtype {
+    padding: 0.5em 0.5em 0px 3.2em;
+}
+.dir-rtl .choosercontainer #chooseform .subtype {padding: 0.5em 3.2em 0px 0.5em;}
+/* Selected option settings */
+.jsenabled .choosercontainer #chooseform .instruction,
+.choosercontainer #chooseform .selected .typesummary {
+    display: block;
+}
+.choosercontainer #chooseform .selected {
+    background-color: [[setting:corsch_B]];
+    box-shadow: 0px 0px 10px 0px [[setting:corsch_2]];
+    -webkit-box-shadow: 0px 0px 10px 0px [[setting:corsch_2]];
+    -moz-box-shadow: 0px 0px 10px 0px [[setting:corsch_2]];
+}
+/* Center the submit buttons within the area */
+.choosercontainer #chooseform .submitbuttons {
+    margin: 1em auto 1em auto;
+    text-align: center;
+}
+/**** PARA RESOLVER PROBLEMAS ****/
+.moodle-dialogue-base .hidden,
+.moodle-dialogue-base .moodle-dialogue-hidden {
+    display: none;
+}
+
+/* ----- calendar event panel information ----- */
+.calendar-event-panel {background-color: [[setting:corsch_B]]; border:none; max-width: 85%;}
+.calendar-event-panel .yui3-overlay-content {background-color: [[setting:corsch_B]]; border-color: [setting:corsch_1]];}
+.calendar-event-panel .yui3-overlay-content h2.eventtitle {font-size: 0.90em; font-weight: normal;}
+
+/* ----- user-enroller-panel -> Buscar panel de matriculación de usuario ----- */
+
+/* ----- confirmdialog_mask + confirmdialog_c + confirmdialog -> Buscar el cuadro de confirmación en algunas actividades ---- */
+
+/* ----- inserted color text messages -> /base/core.css #72 ----- */
+.green, 
+.notifysuccess, 
+.red, 
+.notifyproblem, 
+.redirectmessage, 
+.forumnodiscuss,
+.nomessages,  
+#page-enrol-index #notice, 
+#page-admin-roles-assign DIV.box.generalbox, 
+#page-admin-course-pending #region-main .region-content DIV H2,
+#page-tag-manage #region-main .region-content DIV H2 { 
+    margin: 0.50em 2em 0.50em 2em;
+    padding: 1em 1em 1em 1em;
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+    border-color: #E0E0E0;
+    text-align: center;
+    font-size: 1.20em; 
+    font-weight: bold;
+    }
+.green, 
+.notifysuccess, 
+.redirectmessage, 
+#page-enrol-index #notice, 
+#page-admin-course-pending #region-main .region-content DIV H2, 
+#page-admin-report-security-index .statusok, 
+#page-admin-report-performance-index .statusok {
+    background-color: #EEFFDD;
+    color: #008000;
+    }
+.red, 
+.notifyproblem, 
+.forumnodiscuss, 
+#page-admin-roles-assign div.box.generalbox, 
+.mform span.error, 
+.mform .fdescription.required, 
+#page-admin-report-security-index .statuscritical, 
+#page-admin-report-performance-index .statuscritical {
+    background-color: #FFEFEF;
+    color: #CC0000;
+    }
+.yellow, 
+#page-admin-report-security-index .statuswarning, 
+#page-admin-report-performance-index .statuswarning {
+    background-color: #FFFFEE;
+    color: #FFFF00;
+    }
+.orange, 
+#page-tag-manage #region-main .region-content DIV H2, 
+#page-admin-report-security-index .statusserious, 
+#page-admin-report-performance-index .statusserious {
+    background-color: #FFF7EE;
+    color: #FFA500;
+    }
+/* disabled colour */
+.gray, 
+.section .availabilityinfo {
+    /*background-color: #FFF7EE;*/
+    color: #AAAAAA;
+}
+/* Especial notice */
+#notice { 
+    margin: 0.50em 2em 0.50em 2em;
+    padding: 1em 1em 1em 1em;
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+    border-color: #E0E0E0;
+    }
+/* Mensajes en las páginas de administración */
+.adminwarning { 
+    margin: 0.50em 2em 0.50em 2em;
+    padding: 1em 2em 1em 2em;
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+    border-color: #E0E0E0;
+    background-color: #F0F0F0;
+    color: [[setting:corsch_1]];
+    text-align: center;
+    }
+/* /base/admin.css #81 */
+#page-admin-report-security-index tr:nth-of-type(even) TD.status, #page-admin-report-performance-index tr:nth-of-type(even) TD.status {background-color: [[setting:corsch_2]];}
+#page-admin-report-security-index tr:nth-of-type(odd) TD.status, #page-admin-report-performance-index tr:nth-of-type(odd) TD.status {background-color: [[setting:corsch_3]];}
+#page-admin-report-security-index .statusok, #page-admin-report-performance-index .statusok {background-color: transparent;}
+#page-admin-report-security-index .statuswarning, #page-admin-report-performance-index .statuswarning {background-color: transparent;}
+#page-admin-report-security-index .statusserious, #page-admin-report-performance-index .statusserious {background-color: transparent;}
+#page-admin-report-security-index .statuscritical, #page-admin-report-performance-index .statuscritical {background-color: transparent;}
+
+/* /base/admin.css #133 */
+#page-admin-index .adminwarning.maturityinfo.maturity50 {background-color:#FFEEFF;}
+#page-admin-index .adminwarning.maturityinfo.maturity100,
+#page-admin-index .adminwarning.maturityinfo.maturity150 {background-color:#F3F2AA;}
+
+#page-admin-index .adminwarning.availableupdatesinfo .moodleupdateinfo {line-height:1.8;margin:20px auto;width:60%;text-align:left;}
+#page-admin-index .adminwarning.availableupdatesinfo .moodleupdateinfo .info.release {margin-right:10px;padding: 5px 10px 5px 10px;-moz-border-radius: 0px;-webkit-border-radius: 0px;border-radius: 0px;}
+#page-admin-index .adminwarning.availableupdatesinfo .moodleupdateinfo.maturity50 .info.release {background-color:#FFEEFF;}
+#page-admin-index .adminwarning.availableupdatesinfo .moodleupdateinfo.maturity100 .info.release,
+#page-admin-index .adminwarning.availableupdatesinfo .moodleupdateinfo.maturity150 .info.release {background-color:#F3F2AA;}
+#page-admin-index .adminwarning.availableupdatesinfo .moodleupdateinfo.maturity200 .info.release {background-color:#d2ebff;}
+#page-admin-index .adminwarning.availableupdatesinfo .moodleupdateinfo span,
+#page-admin-index .adminwarning.availableupdatesinfo .moodleupdateinfo a {padding-right:1em;}
+#page-admin-index .adminwarning.availableupdatesinfo .moodleupdateinfo .separator {border-left:1px dotted #E0E0E0;}
+
+/* Aviso al final de los formularios de campo requerido */
+.mform .fdescription.required {float: right;}
+.dir-rtl .mform .fdescription.required {float: left;}
+/* Color de las etiquetas de los campos obligatorios */
+.mform .error, .mform .required {color:#CC0000;}
+/* Aviso de error del campo obligatorio, al no introducir ningún dato */
+.mform .fdescription.required, 
+.mform span.error { 
+    display: inline-block;
+    margin: 0px 0px 3px 0px;
+    padding: 2px 3em 1px 3em;
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+    border-color: #E0E0E0;
+    }
+.mform .fdescription.required {margin: 1em 0px 3px 0px;}
+/* ??? */
+.mform .required .fgroup span label {color:#000;} 
+
+/* COMPROBAR -> traido de base/question.css */
+.importerror {margin-top: 10px;border-bottom: 1px solid #555;}
+
+/* ----- Mensages en los formularios sobre incidencias con los campos ----- */
+/* Cuando un dato introducido no corresponde con el tipo de dato requerido -> /base/admin.css #214 */
+#adminsettings fieldset.error {font-weight: bold; margin: 0.2em 0px 0.5em 0px; padding: 0px 0px 0px 0px;}
+#adminsettings fieldset.error legend {display: block; font-weight: bold; color: #CC0000;}
+
+
+
+/* ----- Force the same shadow to all windowned message ----- */
+.moodle-dialogue-base .moodle-dialogue .moodle-dialogue-wrap, 
+.calendar-event-panel .yui3-overlay-content {
+    /* right + bottom + interior + ao redor? + color */
+    box-shadow: 5px 5px 20px 0px #CC0000;
+    -webkit-box-shadow: 5px 5px 20px 0px #CC0000;
+    -moz-box-shadow: 5px 5px 20px 0px #CC0000;
+}
+

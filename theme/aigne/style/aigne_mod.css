@@ -1,0 +1,955 @@
+/*----- ----- ----- theme_aigne -> MODS & PLUGINS & ... -----
+_____MISC:
+Comun settings
+Calendar
+Grader Report
+AJAX User Enroller Panel 
+
+_____MODS:
+01 _ Assign +
+02 _ Assignment
+03 _ Book +
+04 _ Chat
+05 _ CheckList
+06 _ Choice
+07 _ Data Base +
+08 _ Feedback +
+09 _ FlashCards
+10 _ Folder
+11 _ Forum +
+11 _ Blogs +
+12 _ Game
+13 _ Glossary +
+14 _ IMSCP
+15 _ JClic
+16 _ MindMaps
+17 _ Label
+18 _ Lesson +
+19 _ LightBoxGallery
+20 _ LTI
+21 _ Page
+22 _ Quiz +
+23 _ Questionnaire +
+24 _ Resource (Archivo) +
+25 _ SCORM +
+26 _ Simple Certificate +
+27 _ StampColl
+28 _ Survey (Encuesta predefinida) +
+29 _ URL +
+30 _ Wiki
+31 _ WorkShop
+
+/* ----- ----- ----- Comun settings ----- ----- ----- */
+.glossarypost .picture img, 
+.forumpost .picture img {
+    width: 35px;
+    height: 35px;
+    margin: 3px 3px 0px 3px;
+}
+.mod_introbox { /* Catch from theme_base/core.ss */
+    border: none;
+    padding: 0px;
+}
+/* ----- ----- ----- Calendar -> .path-calendar + .block .minicalendar ----- ----- ----- */
+.calendartable {
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: [[setting:corsch_1]];
+    font-size: 1.1em;
+}
+.calendartable th,
+.calendartable td {
+    padding: 5px 0px 0px 0px;
+    width: 14%;
+    vertical-align: top;
+    text-align: center;
+}
+.calendartable td {
+    border-width: 1px 0px 0px 0px;
+    border-style: solid;
+    border-color: [[setting:corsch_3]];
+}
+.calendartable td.weekend {
+    color: #CC0000;
+}
+/* Main Content Main Calendar */
+.path-calendar .maincalendar {
+    padding: 0px 0px 0px 0px;
+    vertical-align: top;
+}
+.path-calendar .maincalendar .heightcontainer {
+    height: 100%;
+    position: relative;
+}
+.path-calendar .maincalendar .calendarmonth {
+    width: 98%;
+    margin: 10px auto 10px auto;
+}
+.path-calendar .maincalendar .calendarmonth ul {
+    margin: 0px 0px 0px 0px;
+}
+.path-calendar .maincalendar .calendarmonth ul li {
+    list-style-type: none;
+    margin-top: 5px;
+}
+.path-calendar .maincalendar .calendarmonth th {
+    padding: 5px 0px 5px 0px;
+    border-width: 1px 0px 2px 0px;
+    border-style: solid;
+    border-color: [[setting:corsch_1]];
+    background-color: [[setting:corsch_3]];
+}
+.path-calendar .maincalendar .calendarmonth td {
+    height: 6em;
+}
+.path-calendar .maincalendar .controls {
+    width:98%;
+    margin: 10px auto 0px auto;
+}
+.path-calendar .maincalendar .calendar-controls .previous, 
+.path-calendar .maincalendar .calendar-controls .current, 
+.path-calendar .maincalendar .calendar-controls .next {
+    display: block;
+    float: left;
+    width: 20%;
+    font-size: 1.20em;
+}
+.path-calendar .maincalendar .calendar-controls .previous {
+    text-align: left;
+}
+.dir-rtl.path-calendar .maincalendar .calendar-controls .previous {float: right; text-align: right;}
+.path-calendar .maincalendar .calendar-controls .current {
+    width: 50%;
+    text-align: center;
+    font-size: 2em;
+}
+.path-calendar .maincalendar .calendar-controls .next {
+    float: right;
+    text-align: right;
+}
+.dir-rtl.path-calendar .maincalendar .calendar-controls .next {float: left; text-align: left;}
+.path-calendar .maincalendar .eventlist .event {
+    width: 100%;
+    margin-bottom: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-spacing: 0px;
+    border-collapse: separate;
+}
+.path-calendar .maincalendar .eventlist .event .topic .name {
+    float: left;
+}
+.dir-rtl .path-calendar .maincalendar .eventlist .event .topic .name {float: right;}
+.path-calendar .maincalendar .eventlist .event .topic .date {
+    float: right;
+}
+.dir-rtl .path-calendar .maincalendar .eventlist .event .topic .date {float: left;}
+.path-calendar .maincalendar .eventlist .event .subscription, 
+.path-calendar .maincalendar .eventlist .event .course {
+    float: left;
+    clear: left;
+}
+.dir-rtl .path-calendar .maincalendar .eventlist .event .subscription, 
+.dir-rtl .path-calendar .maincalendar .eventlist .event .course {float: right; clear: right;}
+.path-calendar .maincalendar .eventlist .event .side {
+    width: 32px;
+}
+.path-calendar .maincalendar .eventlist .event .commands a { 
+    margin: 0px 3px 0px 3px;
+}
+.path-calendar .maincalendar .header {
+    overflow: hidden;
+}
+.path-calendar .maincalendar .header .buttons {
+    float: right;
+}
+.dir-rtl .path-calendar .maincalendar .header .buttons {float: left;}
+.path-calendar .filters table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 2px;
+}
+.path-calendar .maincalendar .bottom {
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+}
+.path-calendar .maincalendar .bottom A IMG {
+    margin-top: 1px;
+    width: 60px;
+    height: 19px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #777777;
+}
+#page-calendar-export .indent {
+    padding-left: 20px;
+}
+.dir-rtl #page-calendar-export .indent {padding-right: 20px;}
+.path-calendar .cal_courses_flt label { 
+    margin-right: .45em;
+}
+
+.dir-rtl .path-calendar .cal_courses_flt label {margin-left: .45em;}
+/* Block Calendar */
+.block .minicalendar {
+    width: 100%;
+    margin: 10px auto 10px auto;
+    border-width: 0px 0px 0px 0px;
+}
+.block .minicalendar th {
+    padding: 3px 0px 3px 0px;
+    border-width: 1px 0px 2px 0px;
+    border-style: solid;
+    border-color: [[setting:corsch_3]];
+    background-color: [[setting:corsch_B]];
+    font-size: 0.80em;
+    font-weight: normal;
+}
+.block .minicalendar td {
+    font-size: 0.90em;
+    padding: 3px 3px 3px 3px;
+    border-width: 0px 0px 0px 0px;
+    background-color: [[setting:corsch_B]];
+}
+.block .minicalendar .weekdays {
+}
+.block .calendar-controls .previous, 
+.block .calendar-controls .current, 
+.block .calendar-controls .next {
+    display: block;
+    float: left;
+    width: 20%;
+}
+.block .calendar-controls .previous {
+    text-align: left;
+}
+.dir-rtl .block .calendar-controls .previous {float: right; text-align: right;}
+.block .calendar-controls .current {
+    width: 50%;
+    text-align: center;
+}
+.block .calendar-controls .next {
+    float: right;
+    text-align: right;
+}
+.dir-rtl .block .calendar-controls .next {float: left; text-align: left;}
+.block .filters table {
+    border-collapse: separate;
+    border-spacing: 2px;
+    padding: 2px 2px 2px 2px;
+    width: 100%;
+}
+.block .calendar_filters ul {
+    list-style: none; 
+    margin: 0px 0px 0px 0px;
+}
+.block .calendar_filters li { 
+    margin-bottom: 0.2em;
+    padding: 0px 0px 0px 0px;
+}
+.block .calendar_filters li span img {
+    padding: 0px 0.20em 0px 0.20em;
+}
+.block .calendar_filters .eventname {
+    padding-left: 0.20em;
+}
+.dir-rtl .block .calendar_filters .eventname {padding-right: 0.20em;}
+.block .content h3.eventskey {
+    margin: 0.5em 0px 0px 0px;
+}
+/*  Calendar Events Colours */
+#calendar .event_global,
+.minicalendar .event_global,
+.block_calendar_month .event_global,
+.calendar_event_global {
+    border-color: #def2ba !important;
+    background-color: #D6F8CD;
+}
+#calendar .event_course,
+.minicalendar .event_course,
+.block_calendar_month .event_course,
+.calendar_event_course {
+    border-color: #c6dfeb !important;
+    background-color: #FFD3BD;
+}
+#calendar .event_group,
+.minicalendar .event_group,
+.block_calendar_month .event_group,
+.calendar_event_group {
+    border-color: #feffc2 !important;
+    background-color: #FEE7AE;
+}
+#calendar .event_user,
+.minicalendar .event_user,
+.block_calendar_month .event_user,
+.calendar_event_user {
+    border-color: #d9c6e2 !important;
+    background-color: #DCE7EC;
+}
+.fdate_selector {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+/* ----- ----- ----- GRADER REPORT ----- ----- ----- */
+.user-grade td.oddd1 {
+    background-color: #def
+}
+.user-grade {
+    border: 1px solid #abc;
+}
+.user-grade td.b1l, .user-grade td.b2l {
+    border-left: 2px solid #777777;
+}
+.user-grade td.b1b, .user-grade td.b2b {
+    border-bottom: 2px solid #777777;
+}
+.user-grade td.b1t, .user-grade td.b2t {
+    border-top: 2px solid #369;
+}
+tr.discussion td.replies { 
+    text-align: center;
+    }
+
+/* ----- ----- ----- AJAX User Enroller Panel ----- ----- ----- */
+.user-enroller-panel {
+    width:400px;
+    background-color: #666;
+    position:absolute;
+    top:10%;
+    left:10%;
+    border:1px solid #666;
+    border-width:0 5px 5px 0;
+    z-index: 99999!important;
+}
+
+/* ----- ----- ----- 01 _ Assign - FALTA TERMINAR ----- ----- ----- */
+/* Cambiar colores de fondo y texto */
+td.submissionstatus,
+div.submissionstatus,
+a:link.submissionstatus {background-color: #efefef; color: black;}
+
+td.submissionstatusdraft,
+div.submissionstatusdraft,
+a:link.submissionstatusdraft {background-color: #efefcf; color: black;}
+
+td.submissionstatussubmitted,
+div.submissionstatussubmitted,
+a:link.submissionstatussubmitted {background-color: #cfefcf; color: black;}
+
+td.submissionlocked,
+div.submissionlocked {background-color: #efefcf; color: black;}
+
+td.submissionreopened,
+div.submissionreopened {background-color: #efefef; color: black;}
+
+td.submissiongraded,
+div.submissiongraded {background-color: #cfefcf; color: black;}
+
+td.submissionnotgraded,
+div.submissionnotgraded {background-color: #efefef; color: #777777;}
+
+td.latesubmission,
+a:link.latesubmission,
+div.latesubmission {background-color: #efcfcf; color: black;}
+
+td.earlysubmission,
+div.earlysubmission {background-color: #cfefcf; color: black;}
+
+/* ----- ----- ----- 02 _ Assignment - FALTA TERMINAR ----- ----- ----- */
+
+/* ----- ----- ----- 03 _ BOOK _ Libro -> .path-mod-book - FALTA TERMINAR ----- ----- ----- */
+.path-mod-book .book_chapter_title {
+    margin: 0px 0px 0.50em 0px;
+    font-family: "[[setting:fontfam]]", Helvetica, sans-serif;
+    text-align: left;
+    font-size: 1.50em;
+    font-weight: bold;
+}
+.path-mod-book .navtop, 
+.path-mod-book .navbottom {
+    padding: 0.50em 0px 0.50em 0px;
+    text-align: center;
+    border-style: solid;
+    border-color: [[setting:corsch_1]];
+}
+.path-mod-book .navtop {
+    margin-bottom: 0px; /*catch*/
+    border-width: 0px 0px 2px 0px;
+}
+.path-mod-book .navbottom {
+    border-width: 2px 0px 0px 0px;
+}
+.path-mod-book .book_content DIV {
+    padding: 1em 1em 1em 1em;
+}
+.path-mod-book .block_book_toc ul, 
+.path-mod-book .block_book_toc ul li {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0.50em 0px;
+}
+.path-mod-book .book_toc_none, 
+.path-mod-book .book_toc_numbered, 
+.path-mod-book .book_toc_bullets, 
+.path-mod-book .book_toc_indented {
+  font-size: 0.95em;
+}
+.path-mod-book .book_toc_bullets ul, 
+.path-mod-book .book_toc_bullets ul ul {
+    margin-left: 1em;
+} 
+.path-mod-book .book_toc_bullets li {
+    list-style: square outside none;    
+}
+
+/* ----- ----- ----- 04 _ CHAT -> #page-mod-chat-view + #page-mod-chat-gui_ajax- + .path-mod-chat ----- ----- ----- */
+
+/* ----- ----- ----- 05 _ CHECKLIST ----- ----- ----- */
+
+/* ----- ----- ----- 06 _ CHOICE _ Consulta -> #page-mod-choice-view + .path-mod-choice ----- ----- ----- */
+
+/* ----- ----- ----- 07 _ DATABASE  _ Base de Datos -> #page-mod-data-xxx + .path-mod-data ----- ----- ----- */
+/* /preset/imagegallery list: DIV#pictures + TABLE.pictureframe */
+/* /preset/imagegallery simple: TABLE#single + #singleimage */ 
+.path-mod-data .tabtree {
+    margin-bottom: 0px;
+}
+#page-mod-data-field- .fieldadd, 
+#page-mod-data-field- .sortdefault, 
+.path-mod-data-field .generalbox {
+    margin: 0px auto 0px auto;
+}
+#page-mod-data-field- .fieldadd, 
+#page-mod-data-field- .sortdefault, 
+.path-mod-data-field .generalbox, 
+#page-mod-data-view .paging, 
+#page-mod-data-view #pictures, 
+#page-mod-data-view #single, 
+#page-mod-data-view .datapreferences, 
+#page-mod-data-edit .generalbox, 
+#page-mod-data-export .mform {
+    padding: 2em 1em 1em 1em;
+    background-color: [[setting:corsch_4]];
+    border-width: 0px 0px 2px 0px;
+    border-style: solid;
+    border-color: [[setting:corsch_1]];
+}
+#page-mod-data-field- .fieldadd {
+    border-width: 0px 0px 1px 0px;
+}
+.path-mod-data-field .generalbox {
+    width: 97%;
+} 
+#page-mod-data-field- TABLE.generaltable {
+    margin: 2em auto 2em auto;
+}
+#page-mod-data-view FORM {
+    background-color: [[setting:corsch_4]];
+    text-align: center;
+}
+#page-mod-data-view .paging {
+    border-width: 0px 0px 1px 0px;
+}
+#page-mod-data-view .defaulttemplate {
+    background-color: [[setting:corsch_4]];
+}
+#page-mod-data-view .defaulttemplate TABLE {
+    margin-bottom: 0px;
+}
+#page-mod-data-view #pictures, 
+#page-mod-data-view .datapreferences {
+    width: 97%;
+}
+#page-mod-data-view #single {
+    width: 100%;
+}
+#page-mod-data-view #singleimage img {
+	display: block;
+	width: auto;
+	max-height: 550px; /* Definido en mod\data\preset\imagegallery\jstemplate.js */
+}
+#page-mod-data-view .datapreferences {
+    margin: -1.20em auto 0px auto;
+}
+#page-mod-data-edit .generalbox {
+    width: 97%;
+    margin: 0px auto 0px auto;
+}
+#page-mod-data-templates .template_heading {
+    margin: 4em auto 0px auto;
+}
+#page-mod-data-preset H2.main {
+    display: none;
+}
+#page-mod-data-preset .mform {
+    padding: 3em 1em 1em 1em;
+    background-color: [[setting:corsch_4]];
+}
+#page-mod-data-preset #mform1 {
+    border-width: 0px 0px 2px 0px;
+    border-style: solid;
+    border-color: [[setting:corsch_1]];
+}
+
+/* ----- ----- ----- 08 _ FEEDBACK _ Encuesta -> #page-mod-feedback-view + .path-mod-feedback ----- ----- -----*/
+.path-mod-feedback .tabtree ~ .mform, 
+.path-mod-feedback .tabtree ~ .generalbox {
+    width: 97%;
+    margin: -3em auto 0px auto;
+    padding: 2em 1em 2em 1em;
+    background-color: [[setting:corsch_4]];
+    border-width: 0px 0px 2px 0px;
+    border-style: solid;
+    border-color: [[setting:corsch_1]];
+}
+#page-mod-feedback-view .tabtree ~ H2.main, 
+#page-mod-feedback-edit_item .tabtree ~ H2.main {
+    margin: -2.50em auto 0px auto;
+}
+#page-mod-feedback-view H2.main, 
+#page-mod-feedback-view H4.main, 
+#page-mod-feedback-edit_item H2.main  {
+    padding: 1em 1em 1em 1em;
+    background-color: [[setting:corsch_4]];
+    font-weight: bold;
+}
+#page-mod-feedback-view .boxaligncenter, 
+#page-mod-feedback-view .generalbox {
+    width: 97%;
+    margin: 0px auto 0px auto;
+    padding: 1em 1em 1em 1em;
+    background-color: [[setting:corsch_4]];
+}
+#page-mod-feedback-show_entries .generalbox {
+    margin: -4.50em auto 0px auto;
+}
+
+/* ----- ----- ----- 09 _ FlashCards ----- ----- ----- */
+
+/* ----- ----- ----- 10 _ Folder ----- ----- ----- */
+
+/* ----- ----- ----- 11 _ FORUM -> .forumpost + #site-news-forum ----- ----- ----- */
+/* Don't touch (nuclear) -> depends on theme_base */
+.forumpost {
+    width: 100%;
+    margin: 1em 0px 0px 0px;
+    border-collapse: separate;
+    border-width: 1px 0px 1px 0px;
+    border-style: solid;
+    border-color: [[setting:corsch_1]];
+}
+.forumpost .row.header, 
+.forumpost .row.maincontent, 
+.forumpost .row.side {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+/* Post Header */
+.forumpost .row.header {
+    background-color: [[setting:corsch_3]];
+}
+.forumpost .topic {
+    padding: 2px 1em 1px 1em;
+    color: [[setting:corsch_T]];
+}
+.forumpost .topic .subject {
+    font-weight: bold;
+}
+.forumpost .topic .author {
+    font-size: 0.90em;
+}
+/* Post Content */
+.forumpost .row.maincontent {
+    background-color: [[setting:corsch_4]];
+}
+.forumpost .content {
+    max-width: 100%;
+    overflow: auto;
+    padding: 0.50em 1em 0px 1em;
+}
+/* Post  footer */
+.forumpost .row.side {
+    background-color: [[setting:corsch_3]];
+}
+.forumpost .row.side .options {
+    padding: 2px 1em 1px 1em;
+}
+/* #page-site-index  */
+#site-news-forum .forumpost .topic .author, 
+#site-news-forum .forumpost .picture img, 
+#site-news-forum .forumpost .row.side {
+    display: [[setting:sitenewsi]];
+}
+/*#site-news-forum .forumpost .row.header .left {
+    display: [[setting:sitenewso]];  /* contrario de lo anterior
+}*/
+/*#site-news-forum .forumpost .row.header {
+    background: url([[pix:theme|images/news]]) no-repeat 99% center;
+}*/
+#site-news-forum .forumpost .row.header {
+    background-color: [[setting:corsch_2]];
+}
+#site-news-forum .forumpost .picture img {
+    margin: 12px 3px 0px 3px;
+}
+#site-news-forum .forumpost .topic .subject {
+    padding: 10px 0px 7px 0px;
+    text-transform: uppercase;
+    color: [[setting:corsch_B]];
+}
+#site-news-forum .forumpost .row.header .left {
+    position: relative;
+    top: -5px;
+    left: 7px;
+    width: 32px;
+    height: 32px;
+    background: url([[pix:theme|images/news]]) no-repeat center center;
+}
+#site-news-forum .forumpost .topic .author A {
+    color: [[setting:corsch_3]];
+}
+/* ahora habrá que poner algo para intercambiar entre img y left */
+
+/* TABLE.forumheaderlist -> Forum post list */
+.path-mod-forum .forumheaderlist {
+    width: 100%;
+    margin: 1em 0px 1em 0px;
+    padding: 0px 0px 0px 0px;
+    border-width: 1px 0px 1px 0px;
+    border-style: solid;
+    border-color: [[setting:corsch_1]];
+}
+.path-mod-forum .forumheaderlist TH.header {
+    border-width: 0px 0px 2px 0px;
+    border-style: solid;
+    border-color: [[setting:corsch_1]];
+    background-color: [[setting:corsch_2]];
+    color: [[setting:corsch_B]];
+}
+.path-mod-forum .forumheaderlist .discussion TD {
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: [[setting:corsch_1]];
+}
+.path-mod-forum .forumheaderlist .discussion TD.topic.starter {
+    width: 50%;
+}
+.path-mod-forum .forumheaderlist .discussion.r0 {
+    background-color: [[setting:corsch_4]];
+}
+.path-mod-forum .forumheaderlist .discussion.r1 {
+    background-color: [[setting:corsch_3]];
+}
+/* Lista de respuestas en rama */
+.path-mod-forum .indent .forumthread {
+    line-height: 2em;
+}
+#page-mod-forum-search #intro {
+    padding: 0.70em 0px 0.50em 0px;
+    margin: 0px 0px 0px 0px;
+    font-size: 1.30em;
+}
+/* Search Form -> Only in Forum Advanced Search? */
+#searchform {
+    margin: 1em 0px 1em 0px;
+    padding: 2em 1em 2em 1em;
+    border-width: 1px 0px 2px 0px;
+    border-style: solid;
+    border-color: [[setting:corsch_1]];
+    background-color: [[setting:corsch_4]];
+}
+
+/* ----- ----- ----- 11 _ BLOGS _ Use the same than FORUM _ -> .blog_entry ----- ----- ----- */
+.addbloglink {
+    text-align: center;
+    }
+.blog_entry .content {
+    margin-left: 43px;
+    }
+.blog_entry .audience, 
+.blog_entry .commands, 
+.blog_entry .lastmodified { 
+    text-align: right; 
+    padding: 0px 0px 0px 0px;
+    font-size: 0.90em;
+    }
+.blog_entry .tags {
+    margin-top: 1em;
+    }
+.blog_entry .tags .action-icon img.smallicon { 
+    height: 16px; width: 16px;
+    }
+
+/* ----- ----- ----- 12 _ Game ----- ----- ----- */
+
+/* ----- ----- ----- 13 _ Glossary -> .path-mod-glossary ----- ----- ----- */
+.path-mod-glossary FORM .boxaligncenter {
+    border-width: 1px 0px 1px 0px;
+    border-style: solid;
+    border-color: [[setting:corsch_1]];;
+}
+.path-mod-glossary .glossaryaddentry {
+    text-align: center;
+}
+.path-mod-glossary .entrybox {
+    position: relative;
+    width: 97%;
+    margin: -3em auto 0px auto;
+    padding: 1em 1em 1em 1em;
+    background-color: [[setting:corsch_4]];
+    border-width: 0px 0px 2px 0px;
+    border-style: solid;
+    border-color: [[setting:corsch_1]];
+}
+.path-mod-glossary .entrybox HR {
+    margin: 6px 0px 0px 0px;
+    border-bottom: 1px solid [[setting:corsch_2]];
+}
+/* Header - Letter section */
+.path-mod-glossary .glossarycategoryheader {
+    width: 100%;
+    background-color: [[setting:corsch_3]];
+}
+/* Each post with all things included -> glossarypost */
+/* fullwithauthor + fullwithoutauthor + continuous + .encyclopedia + .FAQ + .entrylist + .dictionary */
+.path-mod-glossary .glossarypost {
+    width: 100%;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: [[setting:corsch_2]];
+}
+.path-mod-glossary .glossarypost.entrylist {
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: [[setting:corsch_5]];
+}
+.dir-rtl .page-mod-glossary .glossarypost {text-align: right;}
+/* Header in some types */
+.path-mod-glossary .glossarypost .entryheader {}
+/* The approval zone in header */
+.path-mod-glossary .glossarypost .entryapproval {}
+/* The left bar in some types */
+.path-mod-glossary .glossarypost .left.side {}
+/* All the entry */
+.path-mod-glossary .glossarypost .entry {
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 6px 0px 6px;
+}
+/* The Concept H3 -> all versions / H4 2.7 version */
+.path-mod-glossary .glossarypost .concept H3, 
+.path-mod-glossary .glossarypost .concept H4 {
+    font-weight: bold;
+    padding: 0px 0px 0px 0px;
+}
+/* The Definition */
+.path-mod-glossary .glossarypost .concept {}
+/* The Image in encyclopedia Definition */
+.path-mod-glossary .encyclopedia TD.entry IMG {
+    display: block;
+    width: auto; /* Resolver problema */
+    max-height: 600px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 5px 0px;
+}
+/* The bottom section in each entry, with aliases, buttons, etc */
+.path-mod-glossary .glossarypost .entrylowersection {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 6px 0px 6px;
+}
+.path-mod-glossary .glossarypost .entrylowersection IMG {
+    width: 16px;
+    height: 16px;
+    display: inline;
+}
+.path-mod-glossary .encyclopedia .entrylowersection {
+    float: right;
+}
+/* code change -> SELECT -> LI */
+.path-mod-glossary .entrylowersection .aliases #keyword {
+    display: inline
+}
+/* secondary texts */
+.path-mod-glossary .glossarypost .commands,
+.path-mod-glossary .glossarypost .author,
+.path-mod-glossary .glossarypost .time,
+.path-mod-glossary .glossarypost .entrylowersection .icons,
+.path-mod-glossary .glossarypost .entrylowersection .ratings,
+.path-mod-glossary .glossarypost .entrylowersection .aliases {
+    font-size: 0.8em;
+}
+/* print icon _ superior+right */
+.path-mod-glossary .glossarycontrol IMG.icon {
+    width: 32px;
+    height: 32px;
+    }
+
+/* ----- ----- ----- 14 _ IMSCP ----- ----- ----- */
+
+/* ----- ----- ----- 15 _ JClic ----- ----- ----- */
+
+/* ----- ----- ----- 16 _ MindMaps ----- ----- ----- */
+
+/* ----- ----- ----- 17 _ Label ----- ----- ----- */
+
+/* ----- ----- ----- 18 _ LESSON _ Lección -> .path-mod-lesson ----- ----- ----- */
+.path-mod-lesson .firstpageoptions {
+    width: 97%;
+    margin: -0.30em auto 0px auto;
+    padding: 1em 1em 1em 1em;
+    border-width: 0px 0px 2px 0px;
+    border-style: solid;
+    border-color: [[setting:corsch_1]];
+    background-color: [[setting:corsch_4]];
+}
+.path-mod-lesson .firstpageoptions H3,
+.path-mod-lesson .firstpageoptions P {
+    text-align: center;
+}
+.path-mod-lesson .centerpadded { padding: 5px; text-align: center; }
+.path-mod-lesson .feedback {
+    text-align: center;
+    font-weight: bold;
+}
+.path-mod-lesson .password-form .generalbox {
+    padding: 10px 10px 10px 10px;
+    width: 50%;
+    text-align: center;
+}
+.path-mod-lesson .center {
+    text-align: center;
+}
+.path-mod-lesson .ongoing {
+    color: #0000FF;
+    margin: 0 0 1em;
+}
+.path-mod-lesson .clock .content {
+    font-size: 1.2em;
+    padding-left: 15px 15px 15px 15px;
+}
+.path-mod-lesson .leftduring .generalbox {
+    padding: 10px 10px 10px 10px;
+    width: 50%;
+    margin: 0 auto;
+}
+.path-mod-lesson .correctanswer {
+    margin: 1em auto;
+    width: 50%;
+    padding: 10px 10px 10px 10px;
+}
+.path-mod-lesson .correctanswer .correct {
+    color: #008000;
+}
+
+/* ----- ----- ----- 19 _ LightBoxGallery ----- ----- ----- */
+
+/* ----- ----- ----- 20 _ LTI _ no format required ----- ----- ----- */
+
+/* ----- ----- ----- 21 _ Page ----- ----- ----- */
+
+/* ----- ----- ----- 22 _ QUESTIONNAIRE _ Encuesta -> .path-mod-questionnaire + #page-mod-questionnaire-view ----- ----- ----- */
+/* Encajar configuración solo cuando esta bajo un TAB */
+.path-mod-questionnaire .tabtree ~  .mform {
+    margin: -3em auto 0px auto;
+    padding: 2em 1em 2em 1em;
+    background-color: [[setting:corsch_4]];
+    border-width: 0px 0px 2px 0px;
+    border-style: solid;
+    border-color: [[setting:corsch_1]];
+}
+.path-mod-questionnaire .qn-info {
+    padding: 0.50em;
+    background-color: [[setting:corsch_2]];
+    color: #FFFFFF;
+}
+.path-mod-questionnaire .qn-question, 
+.path-mod-questionnaire td.selected, 
+#page-mod-questionnaire-complete .raterow:hover, 
+#page-mod-questionnaire-preview .raterow:hover {
+    background-color: [[setting:corsch_3]];
+}
+
+/* ----- ----- ----- 23 _ QUIZ _ Cuestionario -> .path-mod-quiz + #page-mod-quiz-view ----- ----- ----- */
+/* traidos de base/question.css */
+#page-question-preview #techinfo {
+    margin: 1em 0;
+}
+#page-mod-quiz-edit #categoryquestions .header {
+    background: none;
+}
+
+/* ----- ----- ----- 24 _ Resource ----- ----- ----- */
+
+/* ----- ----- ----- 25 _ SCORM -> .path-mod-scorm ----- ----- ----- */
+.path-mod-scorm .tabtree ~ H2.main {
+    margin: -2.30em auto 0px auto;
+    padding: 3em 1em 1em 1em;
+    background-color: [[setting:corsch_4]];
+}
+/* RESOLVER tabs_informes */
+
+/* ----- ----- ----- 26 _ SIMPLE CERTIFICATE -> .path-mod-simplecertificate ----- ----- ----- */
+.path-mod-simplecertificate DIV.singleselect {
+    margin: -3em auto 0px auto;
+    padding: 2em 1em 1em 1em;
+    background-color: [[setting:corsch_4]];
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: [[setting:corsch_1]];
+}
+.path-mod-simplecertificate BR {
+    display: none;
+}
+.path-mod-simplecertificate FORM#bulkissue {
+    margin: 0px auto 0px auto;
+    padding: 2em 1em 1em 1em;
+    background-color: [[setting:corsch_4]];
+    border-width: 0px 0px 2px 0px;
+    border-style: solid;
+    border-color: [[setting:corsch_1]];
+    text-align: center;
+}
+.path-mod-simplecertificate #bulkissue TABLE {
+    margin: 1em auto 1em auto;
+}
+
+/* ----- ----- ----- 27 _ StampColl ----- ----- ----- */
+
+/* ----- ----- ----- 28 _ SURVEY _ Encuesta predefinida -> .path-mod-survey + #page-mod-survey-view ----- ----- ----- */
+.path-mod-survey #surveyform .smalltext {
+    text-align: right;
+    font-size: 1em;
+}
+#page-mod-survey-view .generaltable, 
+#page-mod-survey-report .generaltable {
+    width: 100%;
+}
+#page-mod-survey-save .generalbox {
+    padding: 2px 1em 1px 1em;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #777777;
+    background-color: #F0F0F0;
+    text-align: center;
+    line-height: 1.50em;
+}
+
+/* ----- ----- ----- 29 _ URL ----- ----- ----- */
+#page-mod-url-view H2.main {
+    margin: 1em 0px 0px 0px;
+    padding: 1em 0px 0px 0px;
+}
+#page-mod-url-view #urlintro {
+    margin: 0px 0px 1em 0px;
+    padding: 1em 1em 1em 1em;
+    border-width: 1px 0px 1px 0px;
+    border-style: solid;
+    border-color: [[setting:corsch_1]];
+}
+
+
+
+/* ----- ----- ----- 30 _ Wiki ----- ----- ----- */
+
+/* ----- ----- ----- 31 _ WorkShop ----- ----- ----- */
+

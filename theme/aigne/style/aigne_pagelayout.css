@@ -1,0 +1,205 @@
+/*----- ----- ----- theme_aigne -> LAYOUT STRUCTURE
+ * BODY
+ * #page
+ *   #page-header
+ *   |  #headerlogo
+ *   |  |  .logo
+ *   |  #headeroptions 
+ *   |  |  .headerop
+ *   #navcontainer
+ *   |  #custommenu
+ *   |  #navbar
+ *   |  |  .breadcrumb + .navbutton
+ *   |  #course-header
+ *   #page-content
+ *   |  #region-pre
+ *   |  |  .region-content
+ *   |  #region-main
+ *   |  |  .region-content
+ *   |  #region-post
+ *   |  |  .region-content
+ *   #page-footer
+ *   |  #bottom_1
+ *   |  #bottom_2
+ *   |  |  .navhelp 
+ *   |  #standardfooter (bottom_3)
+ *   |  |  .contact
+ *   |  |  .credits
+ *   |  #bottom_4
+ *   |  #bottom_5
+ *   |  |  .copyright
+ *   |  |  .footerhtml
+ *  
+ * DELETED: [page-wrapper], page-header-wrapper, page-content-wrapper, [region-main-box], 
+ * region-pre-box, region-post-box, region-main-wrapper, footer-wrapper, page-footer-content
+ *   
+ * The body tag may also contain one of three layout specific classes that describe 
+ * the regions of the page and allow us to theme more easily.
+ *   default (no class) = Content + side pre + side post
+ *   side-pre-only      = Content + side pre
+ *   side-post-only     = Content + side post
+ *   content-only       = Content
+ ----- ----- -----*/
+ 
+#page {
+    top: 0px;
+    width: 95%;
+    min-width: 760px;
+    margin: 0px auto 0px auto;
+    padding: 0px 0px 0px 0px;
+    /*background: ;*/
+}
+/*----- HEADER ------*/
+#page-header,
+#headerlogo,
+#headeroptions {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+#page-header {
+    clear: both;
+    width: 100%;
+    height: 51px;
+    margin: 0px 0px 3px 0px;
+    padding: 24px 0px 0px 0px;
+    background-color: [[setting:corsch_B]];
+}
+html[dir=rtl] #page-header {float: none;} /* catch core.css #1240 */
+#headerlogo {
+    position: absolute;
+    top: 0px;
+    width: 200px;
+    height: 75px;
+    background: url([[setting:backlogo]]) no-repeat center center;
+}
+#headeroptions {
+    position: relative;
+    top: 0px;
+    float: right;
+    width: 74%;
+}
+.dir-rtl #headeroptions {float: left;}
+/*----- NAVIGATION ------*/
+#navcontainer,
+#custommenu, 
+#navbar, 
+#course-header {
+    clear: both;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+#navcontainer {
+    margin: 0px 0px 3px 0px;
+}
+#custommenu, 
+#navbar, 
+#course-header {
+    padding: 1px 1em 0px 1em;
+}
+#custommenu { /* -> more customizable options in aigne_menu.css */
+    height: 1.6em;
+    background-color:[[setting:menucolor]];
+}
+#navbar { /* -> more customizable options in aigne_style.css #breadcrumb */
+    min-height: 1.6em;
+    background-color: [[setting:corsch_3]];
+    overflow: auto;
+}
+#course-header {
+    min-height: 1.6em;
+    background-color: [[setting:corsch_4]];
+    overflow: auto;
+}
+/*----- CONTENT _ 3 Column Page Layout ------*/
+#page-content,
+#region-pre, 
+#region-main, 
+#region-post {
+    position: relative;
+    float: left;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+#page-content {
+    clear: both;
+    overflow: hidden;
+    width: 100%;
+}
+#region-pre {
+    width: 19%;
+}
+#region-main {
+    width: 61%;
+    margin: 0px 0.5% 0px 0.5%;
+    border-width: 1px 0px 0px 0px;
+    border-style: solid;
+    border-color: [[setting:corsch_1]];
+}
+#region-main .region-content {
+    padding: 0px 5px 2em 5px;
+    background-color: [[setting:corsch_B]];
+}
+/*#region-main .region-content BR {display:none;}*/
+#region-post {
+    width: 19%;
+}
+/*----- FOOTER ------*/
+#page-footer,
+#bottom_1, 
+#bottom_2, 
+#standardfooter,
+#bottom_4,
+#bottom_5 {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+#page-footer {
+    clear: both;
+    float: left;
+    width: 100%;
+    min-height: 3em;
+    margin: 3px 0px 0px 0px;
+    background-color: [[setting:corsch_3]];
+    border-width: 1px 0px 1px 0px;
+    border-style: solid;
+    border-color: [[setting:corsch_1]];
+    font-size: 0.95em;
+}
+#bottom_1 {
+}
+#bottom_2 {
+}
+#standardfooter {
+    background-color: [[setting:corsch_2]];
+}
+#bottom_4 {
+}
+#bottom_5 {
+}
+
+
+/*----- SIDE-PRE-ONLY ------*/
+.side-pre-only #region-pre {width: 19%;}
+.side-pre-only #region-main {width: 80.5%; margin: 0px 0px 0px 0.5%;}
+.dir-rtl .side-pre-only #region-main {margin: 0px 0.5% 0px 0px;}
+.side-pre-only #region-post {width: 0;}
+
+/*----- SIDE-POST-ONLY ------*/
+.side-post-only #region-pre {width: 0;}
+.side-post-only #region-main {width: 80.5%; margin: 0px 0.5% 0px 0px;}
+.dir-rtl .side-post-only #region-main {margin: 0px 0px 0px 0.5%;}
+.side-post-only #region-post {width: 19%;}
+.has_dock.side-post-only #region-main {margin-left: 0;}
+
+/*----- CONTENT ONLY - NO BLOCKS WHATSOEVER ------*/
+.content-only #region-pre {width: 0;}
+.content-only #region-main {width: 100%; margin: 0px 0px 0px 0px;}
+.content-only #region-post {width: 0;}
+
+/*----- Report layout ------*/
+.pagelayout-report #page-content #region-main {overflow: auto;}
+.pagelayout-report #page-content #region-main .region-content {overflow: visible;}
+
+
+
+

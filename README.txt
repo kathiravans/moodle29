@@ -19,11 +19,6 @@ a few minutes:
    every five minutes or so.
 
 
-For more information, see the INSTALL DOCUMENTATION:
-
-   http://docs.moodle.org/en/Installing_Moodle
-
-
 Good luck and have fun!
-Martin Dougiamas, Lead Developer
+
 
